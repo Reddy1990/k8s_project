@@ -7,7 +7,7 @@ Steps:
 2. Download and install Vagrant https://www.vagrantup.com/
 3. Preferred IDE Visual Studio code https://code.visualstudio.com/ 
 
-Once all the above mentioned tools or applications have been installed. Navigate to location where Vagrant file is present then use.
+Once all the above mentioned tools or applications have been installed. Navigate to location where Vagrantfile is present then use.
 
 vagrant up
 

@@ -13,3 +13,9 @@ vagrant up
 
 The rest will be taken care by the code.
 
+Once all the VM's are being created, then.
+
+vagrant ssh k8smaster
+
+will let you into the K8S Master node and the rest all kubectl.
+

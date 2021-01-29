@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-deployment
+  labels:
+    app: mysql
+    env: dev
+  namespace: ns-dev-env 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+        env: dev
+    spec:
+      containers:
+        - name: mysql
+          image: mysql:5.7
+          ports:
+            - containerPort: 3306
+          volumeMounts:
+            - mountPath: "/var/lib/mysql"
+              subPath: "mysql"
+              name: mysql-data
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: dev-secrets
+                  key: mysql-pass
+      volumes:
+        - name: mysql-data
+          persistentVolumeClaim:
+            claimName: pvc-nfs-001

@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ns-dev-env
+  labels:
+    env: dev
+
+

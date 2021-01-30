@@ -1,7 +1,9 @@
+#kubectl config set-context my-context --namespace=ns-dev-env
+# kubectl config use-context my-context
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: ns-dev-env
+  name: dev-ns
   labels:
     env: dev
 

@@ -44,3 +44,8 @@ echo -en "k8sadmin\nk8sadmin" | passwd root >/dev/null 2>&1
 
 # Update vagrant user's bashrc file
 echo "export TERM=xterm" >> /etc/bashrc
+
+# Update for bash completion
+sudo apt-get install bash-completion
+echo "source <(kubectl completion bash)" >> ~/.bashrc
+source ~/.bashrc

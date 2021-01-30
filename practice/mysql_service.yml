@@ -4,7 +4,7 @@ metadata:
   name: mysql-service
   labels:
     env: dev
-  namespace: ns-dev-env
+  namespace: dev-ns
 spec:
   type: NodePort
   selector:

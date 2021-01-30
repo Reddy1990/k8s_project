@@ -4,7 +4,7 @@ metadata:
   name: pvc-nfs-001
   labels:
     env: dev
-  namespace: ns-dev-env
+  namespace: dev-ns
 spec:
   accessModes:
     - ReadWriteOnce

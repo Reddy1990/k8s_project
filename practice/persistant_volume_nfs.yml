@@ -4,7 +4,7 @@ metadata:
   name: pv-nfs-001
   labels:
      env: dev
-  namespace: ns-dev-env
+  namespace: dev-ns
 spec:
   capacity: 
     storage: 3Gi

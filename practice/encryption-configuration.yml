@@ -7,6 +7,6 @@ resources:
     - aescbc:
         keys:
         - name: encrypted_key_1
-          # head -c 32 /dev/urandom | base64
-          secret: NWcDPp4jHNJ5iL+oNdb42qB+jxrgUsLoqRLMrx9gZj4=
+          # head -c 32 /dev/urandom | base64 or echo -n 32 'root' | base64
+          secret: cm9vdAo=
     - identity: {}

@@ -16,7 +16,7 @@ Vagrant.configure(2) do |config|
   end
 
 #  config.vm.provision "shell", path: "bootstrap.sh"
-  config.vm.boot_timeout = 800
+  config.vm.boot_timeout = 1000
   # Kubernetes Master 
   config.vm.define "k8smaster", primary: true do |k8smaster|
     k8smaster.vm.box = "ubuntu/xenial64"

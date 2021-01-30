@@ -1,0 +1,12 @@
+apiVersion: apiserver.config.k8s.io/v1
+kind: EncryptionConfiguration
+resources:
+  - resources:
+    - secrets
+    providers:
+    - aescbc:
+        keys:
+        - name: encrypted_key_1
+          # head -c 32 /dev/urandom | base64 or echo -n 32 'root' | base64
+          secret: jKH&fVjaOawlD0&yqj4o1
+    - identity: {}

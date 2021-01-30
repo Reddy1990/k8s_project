@@ -5,7 +5,7 @@ metadata:
   labels:
     app: mysql
     env: dev
-  namespace: ns-dev-env 
+  namespace: dev-ns
 spec:
   replicas: 1
   selector:
@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: mysql
-          image: mysql:5.7
+          image: mysql:latest
           ports:
             - containerPort: 3306
           volumeMounts:
@@ -30,8 +30,8 @@ spec:
             - name: MYSQL_ROOT_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: dev-secrets
-                  key: mysql-pass
+                  name: mysql-secrets
+                  key: mysql-password
       volumes:
         - name: mysql-data
           persistentVolumeClaim:

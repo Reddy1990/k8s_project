@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: active-mq
+  labels:
+    app: active-mq
+  namespace: dev-ns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: active-mq
+  template:
+    metadata:
+      labels:
+        app: active-mq
+    spec:
+      containers:
+        - image: reddy1990/k8s-fleetman-queue:v1
+          name: active-mq
+          ports:
+            - containerPort: 8161
+              name: admin
+            - containerPort: 61616
+              name: broker
+            - containerPort: 5672
+              name: amqp
+            - containerPort: 61613
+              name: stomp
+            - containerPort: 1883
+              name: mqtt
+            - containerPort: 61614
+              name: websocket

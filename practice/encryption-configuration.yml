@@ -8,5 +8,5 @@ resources:
         keys:
         - name: encrypted_key_1
           # head -c 32 /dev/urandom | base64 or echo -n 32 'root' | base64
-          secret: cm9vdAo=
+          secret: dmlzd2FuYXRoYXJlZGR5Cg==
     - identity: {}

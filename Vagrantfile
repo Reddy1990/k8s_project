@@ -25,7 +25,7 @@ Vagrant.configure(2) do |config|
     k8smaster.vm.provider "virtualbox" do |v|
       v.name = "k8smaster"
       v.memory = 2048
-      v.cpus = 2
+      v.cpus = 2  
     end
     k8smaster.vm.provision "shell", path: "bootstrap.sh"
     k8smaster.vm.provision "shell", path: "bootstrap_k8s.sh"
